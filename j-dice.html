@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<script src="./j-dice.js"></script>
+	<script>
+		const myD20 = new D20();
+		const myD100 = new D100();
+		console.log(`Rolling a D20. Result is ${myD20.Roll()}`)
+		console.log(`Rolling a D100. Result is ${myD100.Roll()}`)
+
+		const myDicePool = new DicePool();
+		myDicePool.Add([D6, D6, D6]);
+		myDicePool.Add([D12]);
+		myDicePool.Roll();
+		console.log("The rolls are:");
+		console.log(myDicePool.result);
+		console.log(myDicePool.sum);
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>
