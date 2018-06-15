@@ -35,13 +35,7 @@ class DicePool implements IDicePool {
 		});
 	}
 	Roll(): number {
-		let sum: number = 0;
-
-		this.dice.forEach(x => {
-			console.log("This is inside the arrow function.");
-			console.log(x);
-			sum += x.Roll(); //This doesn't seem to work. "Uncaught TypeError: x.Roll is not a function"
-		});
+		const sum = this.dice.map(die => die.Roll()).reduce((a, b) => a + b);
 		this._sum = sum;
 		return this._sum;
 	}
