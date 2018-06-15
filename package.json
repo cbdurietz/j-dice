@@ -1,0 +1,25 @@
+{
+  "name": "j-dice",
+  "version": "1.0.0",
+  "description": "A simple JavaScript-based dice roller.",
+  "main": "j-dice.js",
+  "scripts": {
+    "start":"concurrently \"tsc --watch\" \"http-server -a localhost\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MartinAskestad/j-dice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MartinAskestad/j-dice/issues"
+  },
+  "homepage": "https://github.com/MartinAskestad/j-dice#readme",
+  "devDependencies": {
+    "concurrently": "^3.5.1",
+    "http-server": "^0.11.1",
+    "typescript": "^2.9.2"
+  }
+}

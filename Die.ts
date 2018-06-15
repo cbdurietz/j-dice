@@ -1,30 +1,18 @@
 interface IDie {
-	sides: number;
-	result: number | null;
+	readonly sides: number;
 	Roll(sides?: number): number;
 }
 
 abstract class Die implements IDie {
-	_sides: number;
-	_result: number | null;
+	readonly sides: number;
+
 	constructor(sides: number) {
-		this._sides = sides;
-		this._result = null;
+		this.sides = sides;
 	}
-	public set sides(v: number) { this._sides = v; }
-	public get sides(): number { return this._sides }
-	public get result(): number | null { return this._result; }
+	
 	Roll(sides?: number): number {
-		if (sides) {
-			this._sides = sides;
-		}
-		try {
-			this._result = Math.floor(Math.random() * this._sides) + 1;
-			console.log(`I rolled ${this._result} on a D${this._sides}.`);
-		} catch (error) {
-			this._result = 0;
-		}
-		return this._result;
+		const result = Math.floor(Math.random() * this.sides) + 1;
+		return result;
 	}
 }
 
