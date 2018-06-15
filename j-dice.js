@@ -48,14 +48,10 @@ var DicePool = /** @class */ (function () {
     };
     DicePool.prototype.Roll = function () {
         var sum = 0;
-        /* 		for (let x in this.dice) {
-                    console.log(x);
-                    //sum += this.dice[x].Roll();
-                }
-         */
         this.dice.forEach(function (x) {
+            console.log("This is inside the arrow function.");
             console.log(x);
-            //sum += this.dice[x].Roll();
+            sum += x.Roll(); //This doesn't seem to work. "Uncaught TypeError: x.Roll is not a function"
         });
         this._sum = sum;
         return this._sum;

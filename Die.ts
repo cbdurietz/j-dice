@@ -1,4 +1,3 @@
-
 interface IDie {
 	sides: number;
 	result: number | null;
@@ -71,4 +70,3 @@ class D100 extends Die {
 		return super.Roll();
 	}
 }
-
