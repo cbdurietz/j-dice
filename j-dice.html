@@ -15,7 +15,7 @@
 
 		const myDicePool = new DicePool();
 		myDicePool.Add([new D6(), new D6(), new D6()]);
-		myDicePool.Add([new D12()]);
+		myDicePool.Add(new D12());
 		myDicePool.Roll();
 		console.log("The rolls are:");
 		console.log(myDicePool.result);

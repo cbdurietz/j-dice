@@ -15,10 +15,14 @@ class DicePool implements IDicePool {
 	}
 	public get sum(): number | null { return this.lastResult.reduce((a, b) => a + b); }
 
-	Add(dice: Die[]): void {
-		dice.forEach(x => {
-			this.dice.push(x);
-		});
+	Add(dice: Die | Die[]): void {
+		if (dice instanceof Array) {
+			dice.forEach(x => {
+				this.dice.push(x);
+			});
+		} else {
+			this.dice.push(dice);
+		}
 	}
 	Roll(): number {
 		this.lastResult = this.dice.map(die => die.Roll());
