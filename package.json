@@ -4,7 +4,7 @@
   "description": "A simple JavaScript-based dice roller.",
   "main": "j-dice.js",
   "scripts": {
-    "start":"concurrently \"tsc --watch\" \"http-server -a localhost\""
+    "start": "concurrently \"tsc --watch\" \"http-server -a localhost\""
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,7 @@
   "homepage": "https://github.com/MartinAskestad/j-dice#readme",
   "devDependencies": {
     "concurrently": "^3.5.1",
-    "http-server": "^0.11.1",
+    "http-server": "^0.12.3",
     "typescript": "^2.9.2"
   }
 }

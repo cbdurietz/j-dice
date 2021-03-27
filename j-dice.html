@@ -20,10 +20,23 @@
 		console.log("The rolls are:");
 		console.log(myDicePool.result);
 		console.log(myDicePool.sum);
+
+		function roll1d6() {
+			const myRoll = new D6();
+			document.querySelector("#Roll_1d6_Result").innerHTML = myRoll.Roll();
+		}
+
+		window.onload = setup;
+
+		function setup() {
+			document.querySelector("#Roll_1d6").addEventListener("click", roll1d6);
+		}
 	</script>
 </head>
 
 <body>
+
+	<button id="Roll_1d6">Roll 1d6</button><label id="Roll_1d6_Result"></label>
 
 </body>
 
